@@ -1,0 +1,5 @@
+<%= form_tag(controller: "songs", action: "search", method: "get") do %>
+  <%= label_tag(:query, "Search for artist or title:") %>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("Search") %>
+<% end %>
