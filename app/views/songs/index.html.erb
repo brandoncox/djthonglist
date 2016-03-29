@@ -1,8 +1,8 @@
 <h1>Available Songs</h1>
 
 <%= render 'search_form' %>
-
-<table  class="table table-inverse table-striped">
+<div class="table-responsive">
+ <table  class="table table-inverse table-striped">
   <thead>
     <tr>
       <th>Artist</th>
@@ -15,22 +15,19 @@
 
   <tbody>
     <% @songs.each do |song| %>
-      <div class="row">
+     
       <tr>
-        <div class="col-xs-6"> <td> <%= song.artist %> </td>
+        <td> <%= song.artist %> </td>
         <td><%= song.title %></td>
-        
-        </div>
-        <!-- <td><%= link_to 'Show', song %></td>
+         !-- <td><%= link_to 'Show', song %></td>
         <td><%= link_to 'Edit', edit_song_path(song) %></td>
         <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         -->
         </tr>
-      </div>
     <% end %>
   </tbody>
-</table>
-
+ </table>
+</div>
 <br>
 
 <%= link_to 'New Song', new_song_path %>
